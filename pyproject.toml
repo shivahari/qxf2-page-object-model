@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling", "hatch-requirements-txt"]
+build-backend = "hatchling.build"
+
+[project]
+name = "qxf2"
+version = "0.0.1"
+license-files = { paths=["LICENSE"] }
+authors = [
+{"name"="shivahariP", "email"="shivahari@qxf2.com"}
+]
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["dependencies"]
+
+[project.scripts]
+create-repo = "qxf2.utility:create_repo"
+
+#[tool.hatch.metadata.hooks.requirements_txt] # hatch-requirements-txt package makes this possible
+#files = ["requirements.txt"]
+
+
+
+[tool.hatch.build.targets.wheel.force-include] # This allows adding files from the repo to the package
+"page_objects/Base_Page.py" = "qxf2/templates/Base_Page.py"
+"page_objects/Mobile_Base_Page.py" = "qxf2/templates/Mobile_Base_Page.py"
+"page_objects/PageFactory.py" = "qxf2/templates/PageFactory.py"
+"page_objects/zero_mobile_page.py" = "qxf2/templates/zero_mobile_page.py"
+"page_objects/zero_page.py" = "qxf2/templates/zero_page.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/qxf2"]
+
