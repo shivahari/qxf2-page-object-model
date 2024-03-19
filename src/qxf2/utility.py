@@ -23,7 +23,8 @@ def create_repo() -> None:
             source_location = file_dir + os.path.sep + "templates" + os.path.sep + file_folder
             if file_folder == "Base_API.py":
                 dest_location = repo_dir + os.path.sep + "endpoints" + os.path.sep + file_folder
-            dest_location = repo_dir + os.path.sep + file_folder
+            else:
+                dest_location = repo_dir + os.path.sep + file_folder
             copy_file_folder(source_location, dest_location)
 
     except Exception as err:
