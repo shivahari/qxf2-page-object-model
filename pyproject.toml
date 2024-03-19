@@ -18,6 +18,9 @@ classifiers = [
 ]
 dynamic = ["dependencies"]
 
+[tool.hatch.metadata.hooks.requirements_txt] # hatch-requirements-txt package makes this possible
+files = ["requirements.txt"]
+
 [project.scripts]
 create-repo = "qxf2.utility:create_repo"
 
