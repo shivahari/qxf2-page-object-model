@@ -4,7 +4,7 @@ import os
 import pathlib
 import shutil
 
-DIRS = ["conf", "endpoints", "logs", "utils"]
+DIRS = ["conf", "endpoints", "log", "utils"]
 
 def create_repo() -> None:
     "Create the Test Framework repo locally"
