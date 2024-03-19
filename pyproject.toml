@@ -25,6 +25,7 @@ files = ["utils/api_repo/requirements.txt"]
 create-repo = "qxf2.utility:create_repo"
 
 [tool.hatch.build.targets.wheel.force-include] # This allows adding files from the repo to the package
+"endpoints/Base_API.py" = "qxf2/templates/Base_API.py"
 "utils/api_repo" = "qxf2/templates/"
 
 [tool.hatch.build.targets.wheel]

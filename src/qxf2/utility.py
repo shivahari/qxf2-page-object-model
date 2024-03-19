@@ -18,9 +18,11 @@ def create_repo() -> None:
         # Copy files/folders
         file_dir = os.path.dirname(__file__)
         repo_dir = "tests"
-        files_folders = ["conf", "conftest.py", "requirements.txt", "utils"]
+        files_folders = ["conf", "conftest.py", "requirements.txt", "utils", "Base_API.py"]
         for file_folder in files_folders:
             source_location = file_dir + os.path.sep + "templates" + os.path.sep + file_folder
+            if file_folder == "Base_API.py":
+                dest_location = repo_dir + os.path.sep + "endpoints" + os.path.sep + file_folder
             dest_location = repo_dir + os.path.sep + file_folder
             copy_file_folder(source_location, dest_location)
 
