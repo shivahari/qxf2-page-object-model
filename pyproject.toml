@@ -9,7 +9,7 @@ license-files = { paths=["LICENSE"] }
 authors = [
 {"name"="shivahariP", "email"="shivahari@qxf2.com"}
 ]
-readme = "README.md"
+readme = "Readme.md"
 requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
